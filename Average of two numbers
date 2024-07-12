@@ -1,0 +1,10 @@
+#include<stdio.h>
+void main()
+{
+      float x,y,z,average;
+      printf("Enter the value of x \nEnter the value of y \nEnter the value of z \n");
+      scanf("%f%f%f",&x,&y,&z);
+      average=(x+y+z)/3;
+      printf("AVERAGE=%f",average);
+}
+     
