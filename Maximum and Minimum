@@ -1,0 +1,31 @@
+#include<stdio.h>
+
+void main() {
+    int a[100], n, i, MAX, MIN;
+    
+    printf("Enter the limit: ");
+    scanf("%d", &n);
+    
+    printf("Enter elements:\n");
+    for (i = 0; i < n; i++) {
+        scanf("%d", &a[i]);
+    }
+    
+    // Assume the first element as both MAX and MIN initially
+    MAX = a[0];
+    MIN = a[0];
+    
+    // Finding MAX and MIN values in the array
+    for (i = 1; i < n; i++) {
+        if (a[i] > MAX) {
+            MAX = a[i];
+        }
+        if (a[i] < MIN) {
+            MIN = a[i];
+        }
+    }
+    
+    // Printing MAX and MIN values
+    printf("MAX = %d\n", MAX);
+    printf("MIN = %d\n", MIN);
+}
