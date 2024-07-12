@@ -1,0 +1,14 @@
+#include<stdio.h>
+void main()
+{
+  int i,limit=0;
+  printf("Enter the value of limit ");
+  scanf("%d",&limit);
+  for(i=1;i<=limit;i++)
+  {
+     if(i%2==0)
+     {  
+        printf("%d\n",i);
+     }
+  }
+}
