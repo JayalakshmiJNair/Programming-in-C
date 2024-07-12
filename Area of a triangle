@@ -1,0 +1,11 @@
+#include<stdio.h>
+#include<math.h>
+void main(){
+     float a,b,c,s,area=0;
+     printf("Enter a,b,c where a,b,c are three sides of a triangle ");
+     scanf("%f%f%f",&a,&b,&c);
+     s=(a+b+c)/2;
+     printf("Half of the perimeter of the triangle =%f\n",s);
+     area=sqrt(s*(s-a)*(s-b)*(s-c));
+     printf("Area=%f\n",area);
+}
