@@ -1,0 +1,21 @@
+#include<stdio.h>
+#include<string.h>
+void main()
+{
+   int n;
+   char a[n],b[n];
+   printf("Enter n:");
+   scanf("%d",&n);
+   printf("Enter the word to check\n");
+   scanf("%c",&a[n]);
+   b[n]=a[n];
+   strcmp(b[n]==a[n]);
+   if(b[n]==a[n])
+   {
+      printf("The given word is palindrome");
+   }
+   else
+   {
+      printf("The given word is not palindrome"):
+   }
+}
