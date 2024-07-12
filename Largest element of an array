@@ -1,0 +1,22 @@
+#include<stdio.h>
+int largest(int arr[], int n) {
+    int max = arr[0];
+    for(int i = 1; i < n; i++) {
+        if(arr[i] > max)
+            max = arr[i];
+    }
+    return max;
+}
+
+int main() {
+    int n, A[10], l;
+    printf("Enter limit:\n");
+    scanf("%d", &n);
+    printf("Enter the elements:\n");
+    for(int i = 0; i < n; i++) {
+        scanf("%d", &A[i]);
+    }
+    l = largest(A, n);
+    printf("%d is largest\n", l);
+    return 0;
+}
