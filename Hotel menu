@@ -1,0 +1,26 @@
+#include<stdio.h>
+void main()
+{
+   char choice;
+   printf("1 for Porotta\n2 for Chapathi\n3 for Appam\n4 for Biriyani\n");
+   printf("Entet your choice:");
+   scanf("%c",&choice);
+   switch(choice)
+   {
+      case '1':
+      printf("You have selected Porotta\n");
+      break;
+      case '2':
+      printf("You have selected Chapathi\n");
+      break;
+      case '3':
+      printf("You have selected Appam\n");
+      break;
+      case '4':
+      printf("You have selected Biriyani\n");
+      break;
+      default:
+      printf("ERROR!!!!!!\n");
+      break;
+    }
+}
