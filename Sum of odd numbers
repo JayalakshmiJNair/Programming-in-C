@@ -1,0 +1,12 @@
+#include<stdio.h>
+void main(){
+    int n,odd_sum=0;
+    printf("Enter the limit:");
+    scanf("%d",&n);
+    for(int i=1;i<=n;i++){
+    if(i%2!=0){
+        odd_sum=odd_sum+i;
+        }
+     }
+     printf("Sum of odd numbers=%d\n",odd_sum);
+}
