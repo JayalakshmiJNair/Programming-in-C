@@ -1,0 +1,30 @@
+#include<stdio.h>
+void main()
+{
+   float a,b;
+   char operator;
+   printf("1 for Addition\n2 for Subtraction\n3 for Multiplication\n4 for Division\n");
+   printf("Select your operator\n");
+   scanf("%c",&operator);
+   printf("Enter a and b\n");
+   scanf("%f%f",&a,&b);
+
+   switch(operator)
+   {
+       case '1':
+       printf("Sum=%f",(a+b));
+       break;
+       case '2':
+       printf("Difference=%f",(a-b));
+       break;
+       case '3':
+       printf("Product=%f",(a*b));
+       break;
+       case '4':
+       printf("Quotient=%f",(a/b));
+       break;
+       default:
+       printf("ERROR!!!!!!");
+   }
+}
+  
