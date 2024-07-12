@@ -1,0 +1,13 @@
+// to swap two numbers without using a temporary variable
+#include<stdio.h>
+void main(){
+    int a,b;
+    printf("Enter number1 ");
+    scanf("%d",&a);
+    printf("Enter number2 ");    
+    scanf("%d",&b);
+    a=a+b;
+    b=a-b;
+    a=a-b;
+    printf("Number 1=%d and Number 2=%d",a,b);
+}
