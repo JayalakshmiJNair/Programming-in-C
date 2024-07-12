@@ -1,0 +1,42 @@
+#include <stdio.h>
+
+int main() {
+    int A[2][2], B[2][2], B_inv[2][2], result[2][2];
+    int det;
+
+    // Input matrix A
+    printf("Enter elements of matrix A (2x2):\n");
+    scanf("%d %d %d %d", &A[0][0], &A[0][1], &A[1][0], &A[1][1]);
+
+    // Input matrix B
+    printf("Enter elements of matrix B (2x2):\n");
+    scanf("%d %d %d %d", &B[0][0], &B[0][1], &B[1][0], &B[1][1]);
+
+    // Calculate determinant of matrix B
+    det = B[0][0] * B[1][1] - B[0][1] * B[1][0];
+
+    // Check if matrix B is invertible
+    if (det == 0) {
+        printf("Matrix B is not invertible.\n");
+        return 1;
+    }
+
+    // Calculate inverse of matrix B
+    B_inv[0][0] = B[1][1] / det;
+    B_inv[0][1] = -B[0][1] / det;
+    B_inv[1][0] = -B[1][0] / det;
+    B_inv[1][1] = B[0][0] / det;
+
+    // Calculate result matrix (A * B_inv)
+    result[0][0] = A[0][0] * B_inv[0][0] + A[0][1] * B_inv[1][0];
+    result[0][1] = A[0][0] * B_inv[0][1] + A[0][1] * B_inv[1][1];
+    result[1][0] = A[1][0] * B_inv[0][0] + A[1][1] * B_inv[1][0];
+    result[1][1] = A[1][0] * B_inv[0][1] + A[1][1] * B_inv[1][1];
+
+    // Output result matrix
+    printf("Result of A / B:\n");
+    printf("%d %d\n", result[0][0], result[0][1]);
+    printf("%d %d\n", result[1][0], result[1][1]);
+
+    return 0;
+}
