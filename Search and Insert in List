@@ -1,0 +1,49 @@
+#include <stdio.h>
+
+#define MAX_SIZE 100
+
+// Function to search for a number in the list
+int search(int list[], int size, int number) {
+    int i;
+    for (i = 0; i < size; i++) {
+        if (list[i] == number) {
+            return i; // Return the index if found
+        }
+    }
+    return -1; // Return -1 if not found
+}
+
+int main() {
+    int list[MAX_SIZE];
+    int size, number, location;
+
+    printf("Enter the size of the list: ");
+    scanf("%d", &size);
+
+    printf("Enter the elements of the list: ");
+    for (int i = 0; i < size; i++) {
+        scanf("%d", &list[i]);
+    }
+
+    printf("Enter the number to search/insert: ");
+    scanf("%d", &number);
+
+    location = search(list, size, number);
+
+    if (location != -1) {
+        printf("Number %d is present at index %d.\n", number, location);
+    } else {
+        // Insert the number at the end of the list
+        list[size] = number;
+        printf("Number %d inserted at index %d.\n", number, size);
+        size++; // Increase the size of the list
+    }
+
+    printf("Updated list: ");
+    for (int i = 0; i < size; i++) {
+        printf("%d ", list[i]);
+    }
+    printf("\n");
+
+    return 0;
+}
